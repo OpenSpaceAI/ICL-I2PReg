@@ -30,3 +30,59 @@ kitti/ (or nuscenes/)
                 └── checkpoints/
 ```
 Make sure to choose the correct dataset (kitti or nuscenes) and stage (stage_1 or stage_2) accordingly.
+
+## Data Preparation
+You can download both the prepared KITTI and nuScenes datasets from the link provided by [CorrI2P](https://github.com/rsy6318/CorrI2P).
+
+## Training
+Our training process consists of two stages. In stage 1, we train only the GPDM (Geometric Prior-guided Overlapping Region Detection Module) using a classification loss and a frustum-pose loss for 20 epochs. In stage 2, we train the entire network for another 20 epochs, while keeping the parameters of the GPDM frozen.
+### Training on KITTI
+#### Stage 1
+The code is in `kitti/stage_1`. Use the following command for training.
+```bash
+CUDA_VISIBLE_DEVICES=0 python trainval.py
+```
+
+#### Stage 2
+The code is in `kitti/stage_2`. 
+Save the checkpoint from Stage 1 to:
+`kitti/stage_2/workspace/vision3d-output/stage_2/checkpoints/checkpoint.pth`
+
+**Note:** Make sure to save the checkpoint with the name `epoch-xx.pth` instead of `checkpoint.pth`, so that the training can properly resume from the beginning.
+
+Use the following command for training.
+```bash
+CUDA_VISIBLE_DEVICES=0 python trainval.py --resume
+```
+
+### Training on nuScenes
+#### Stage 1
+The code is in `nuscenes/stage_1`. Use the following command for training.
+```bash
+CUDA_VISIBLE_DEVICES=0 python trainval.py
+```
+
+#### Stage 2
+The code is in `nuscenes/stage_2`. 
+Save the checkpoint from Stage 1 to:
+`nuscenes/stage_2/workspace/vision3d-output/stage_2/checkpoints/checkpoint.pth`
+
+**Note:** Make sure to save the checkpoint with the name `epoch-xx.pth` instead of `checkpoint.pth`, so that the training can properly resume from the beginning.
+
+Use the following command for training.
+```bash
+CUDA_VISIBLE_DEVICES=0 python trainval.py --resume
+```
+
+## Evaluation
+### Stage 1
+To evaluate the results of stage 1, you can run the following command:
+```bash
+bash eval.sh
+```
+
+### Stage 2
+To evaluate the results of stage 2, you can run the following command:
+```bash
+bash eval.sh
+```

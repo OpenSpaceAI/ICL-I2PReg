@@ -49,7 +49,7 @@ The code is in `kitti/stage_2`.
 Save the checkpoint from Stage 1 to:
 `kitti/stage_2/workspace/vision3d-output/stage_2/checkpoints/checkpoint.pth`
 
-**Note:** Make sure to save the checkpoint with the name `epoch-xx.pth` instead of `checkpoint.pth`, so that the training can properly resume from the beginning.
+**Note: Make sure to save the checkpoint with the name `epoch-xx.pth` instead of `checkpoint.pth`, so that the training in Stage 2 can properly resume from the beginning.**
 
 Use the following command for training.
 ```bash
@@ -68,7 +68,7 @@ The code is in `nuscenes/stage_2`.
 Save the checkpoint from Stage 1 to:
 `nuscenes/stage_2/workspace/vision3d-output/stage_2/checkpoints/checkpoint.pth`
 
-**Note:** Make sure to save the checkpoint with the name `epoch-xx.pth` instead of `checkpoint.pth`, so that the training can properly resume from the beginning.
+**Note: Make sure to save the checkpoint with the name `epoch-xx.pth` instead of `checkpoint.pth`, so that the training in Stage 2 can properly resume from the beginning.**
 
 Use the following command for training.
 ```bash

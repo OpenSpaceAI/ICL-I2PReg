@@ -38,13 +38,13 @@ You can download both the prepared KITTI and nuScenes datasets from the link pro
 ## Training
 Our training process consists of two stages. In stage 1, we train only the GPDM (Geometric Prior-guided Overlapping Region Detection Module) using a classification loss and a frustum-pose loss for 20 epochs. In stage 2, we train the entire network for another 20 epochs, while keeping the parameters of the GPDM frozen.
 ### Training on KITTI
-#### Stage 1
+### Stage 1
 The code is in `kitti/stage_1`. Use the following command for training.
 ```bash
 CUDA_VISIBLE_DEVICES=0 python trainval.py
 ```
 
-#### Stage 2
+### Stage 2
 The code is in `kitti/stage_2`. 
 Save the checkpoint from Stage 1 to:
 `kitti/stage_2/workspace/vision3d-output/stage_2/checkpoints/checkpoint.pth`
@@ -57,13 +57,13 @@ CUDA_VISIBLE_DEVICES=0 python trainval.py --resume
 ```
 
 ### Training on nuScenes
-#### Stage 1
+### Stage 1
 The code is in `nuscenes/stage_1`. Use the following command for training.
 ```bash
 CUDA_VISIBLE_DEVICES=0 python trainval.py
 ```
 
-#### Stage 2
+### Stage 2
 The code is in `nuscenes/stage_2`. 
 Save the checkpoint from Stage 1 to:
 `nuscenes/stage_2/workspace/vision3d-output/stage_2/checkpoints/checkpoint.pth`

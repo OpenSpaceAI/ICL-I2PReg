@@ -17,6 +17,7 @@ conda activate ICLI2P
 
 # 2. Install vision3d following https://github.com/qinzheng93/vision3d
 ```
+Since we made some modifications to the vision3d codebase — for example, the original vision3d does not support the nuScenes dataset — we provide the modified version used in our experiments.
 The code has been tested on Python 3.8, PyTorch 1.13.1, Ubuntu 22.04, GCC 11.3 and CUDA 11.7, but it should work with other configurations.
 
 ## Pre-trained Weights

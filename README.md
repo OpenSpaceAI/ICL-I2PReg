@@ -1,6 +1,7 @@
 # ICL++: Coarse-to-Fine Implicit Correspondence Learning for Image-to-Point Cloud Registration
 This repo is the official implementation of extended version of our CVPR25 paper "Implicit Correspondence Learning for Image-to-Point Cloud Registration"
-By Xinjun Li, Wenfei Yang, Jiacheng Deng, Zhixin Cheng, Xu Zhou, and Tianzhu Zhang.
+
+by Xinjun Li, Wenfei Yang, Jiacheng Deng, Zhixin Cheng, Xu Zhou, and Tianzhu Zhang.
 
 The extended version primarily includes the following additions:
 1. We design a coarse-to-fine strategy to refine the image-to-point cloud correspondence and camera pose, which can improve the performance with smaller computational cost.

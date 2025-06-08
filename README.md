@@ -1,5 +1,6 @@
 # ICL++: Coarse-to-Fine Implicit Correspondence Learning for Image-to-Point Cloud Registration
 This repo is the official implementation of extended version of our CVPR25 paper "Implicit Correspondence Learning for Image-to-Point Cloud Registration"
+Xinjun Li, Wenfei Yang, Jiacheng Deng, Zhixin Cheng, Xu Zhou, Tianzhu Zhang
 
 The extended version primarily includes the following additions:
 1. We design a coarse-to-fine strategy to refine the image-to-point cloud correspondence and camera pose, which can improve the performance with smaller computational cost.
@@ -87,3 +88,11 @@ To evaluate the results of stage 2, you can run the following command:
 ```bash
 bash eval.sh
 ```
+
+## Acknowledgements
+Our code is based on [2D3D-MATR](https://github.com/minhaolee/2D3DMATR), [vision3d](https://github.com/qinzheng93/vision3d) and [CorrI2P](https://github.com/rsy6318/CorrI2P). 
+We thank the authors for their excellent work!
+
+## Citation
+This paper has been accepted to CVPR 2025.  
+The official citation and link will be updated after the paper is published.

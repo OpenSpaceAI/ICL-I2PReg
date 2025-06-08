@@ -95,5 +95,13 @@ Our code is based on [2D3D-MATR](https://github.com/minhaolee/2D3DMATR), [vision
 We thank the authors for their excellent work!
 
 ## Citation
-This paper has been accepted to CVPR 2025.  
-The official citation and link will be updated after the paper is published.
+If you find our work useful, please cite:
+```
+@inproceedings{li2025implicit,
+  title={Implicit Correspondence Learning for Image-to-Point Cloud Registration},
+  author={Li, Xinjun and Yang, Wenfei and Deng, Jiacheng and Cheng, Zhixin and Zhou, Xu and Zhang, Tianzhu},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={16922--16931},
+  year={2025}
+}
+```
